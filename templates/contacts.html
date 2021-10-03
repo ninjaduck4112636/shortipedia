@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block contacts %}
+<div id="contacts_main_page_style">
+	<form action="https://formsubmit.co/shortipedia@gmail.com" method="POST">
+		<input type="hidden" name="_captcha" value="false">
+		<input type="hidden" name="_next" value="http://127.0.0.1:5000/thanks.html">
+		<input type="hidden" name="_subject" value="New submission - Shortipedia Website!">
+		<span id="contacts_name_span"><b>Name: </b></span><input id="contacts_name_input" type="text" name="name" placeholder="Enter your Name" required>
+		<br><br>
+		<span id="contacts_name_span"><b>E-mail: </b></span><input id="contacts_name_input" type="email" name="email" placeholder="Enter your e-mail" required>
+		<br><br><br>
+		<div id="contacts_name_span"><b>Message: </b></div>
+		<br>
+		<textarea class="textinput" id="contacts_message" type="text" name="message" placeholder="Enter your Message ..." required></textarea>
+		<br><br>
+		<button type="submit" class="learn-more">Submit !</button>
+	</form>
+</div>	
+{% endblock %}

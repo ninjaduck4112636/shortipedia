@@ -1,0 +1,147 @@
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 120px;
+  overflow: hidden;
+}
+
+.logo--white path {
+  fill: black;
+}
+
+.logo svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.header__button {
+  z-index: 992;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  right: -80vw;
+  top: 10vh;
+  outline: none;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.header__button[data-open='true'] {
+  background-color: black;
+  -webkit-animation-name: scale;
+          animation-name: scale;
+}
+
+.header__button[data-open='false'] {
+  transition: background-color 250ms linear;
+}
+
+@-webkit-keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+footer svg {
+  width: 15%;
+}
+
+.header__nav {
+  background-color: yellow;
+  position: fixed;
+  overflow: hidden;
+  z-index: 991;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  -webkit-clip-path: circle(var(--radius) at calc(100% - 55px) 47px);
+          clip-path: circle(var(--radius) at calc(100% - 55px) 47px);
+}
+
+.header__nav[data-active='true'] {
+  visibility: visible;
+}
+
+.header__menu {
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu > .header__menu-item {
+  font-size: 10vh;
+}
+
+.header__menu > .header__menu-item:not(:last-of-type) {
+  margin-bottom: 0.1em;
+}
+
+.header__menu-item a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.header__menu-item a:hover {
+  font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .header__button {
+  z-index: 992;
+  width: 30vw;
+  height: 50px;
+  border-radius: 0%;
+  background-color: yellow;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  left: 70vw;
+  top: 15vh;
+  outline: none;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+.header__menu > .header__menu-item {
+  font-size: 9.5vh;
+}
+}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block search %}
+	<form method="POST" action="/search">
+		<div class="card">
+			<input class="input_search" id="userinput" placeholder=" Search to get Short Description..." name="search" required /><button style="margin-bottom: 10px; margin-top: 10px;" type="submit" class="learn-more">Search</button>
+		</div>
+	</form>	
+{% endblock %}
+
+{% block search_content %}{% endblock %}

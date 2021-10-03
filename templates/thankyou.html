@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block thankyou %}
+
+<p id="demo"></p>
+<br><br>
+<div style="text-align: center;">
+	<a href="/" style="text-decoration: none; color: black;"><button type="submit" class="learn-more">Go to Home</button>
+</div>
+
+<script>
+var params = new URL(window.location.href).searchParams;
+var id = params.get('id');
+var first_name = params.get('first_name');
+if (id && first_name) {
+	var name = first_name + ' ' + params.get('last_name');
+	var amount = params.get('amount');
+}
+
+document.getElementById("demo").innerHTML = 'Thank you, '+name+'.<br><br>Your Donation of $'+amount+ ' will really help in the further development of the Quickpedia. <p style="color: #21fa00">Also every Dollar you have donated a tree will be Planted!</p>';
+</script>
+
+{% endblock %}

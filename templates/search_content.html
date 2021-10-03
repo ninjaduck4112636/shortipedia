@@ -1,0 +1,14 @@
+{% extends "search.html" %}
+
+{% block search_content %}
+	<div id="search_content_one" class="card">
+	{% if text_link1==0 %}
+	<p>No such Content!<br>Try something else.</p>
+	{% else %}
+	{% for key,value,replace_key in text_link %}
+	<a style="color: white; text-decoration: none; line-height: 25px;" href="{{ url_for('short_content', ikey=replace_key, title_key=key) }}" name="clicked_value">{{ key }}</a>
+	<br>
+	{% endfor %}
+	{% endif %}
+	</div>
+{% endblock %}
